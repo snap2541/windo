@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+      <script type="text/javascript">
+          function bkrupYes(){
+              document.getElementById('bkrupDate').disabled = false; 
+          };
+          function bkrupNo(){
+              document.getElementById('bkrupDate').disabled = true; 
+          };
+          
+          function closeYes(){
+              document.getElementById('closeDate').style.visibility = "visible"; 
+          }
+          function closeNo(){
+              document.getElementById('closeDate').style.visibility = "hidden"; 
+          }
+    </script>
+</head>
+
+<body>
+    
+    <div id="trans">
+        <label>*거래처코드</label> <input type="text">
+    </div>
+    <div>
+        <table id="info">
+            <caption align="left">▯ 세대정보</caption>
+            <tr>
+                <td> *회사명</td>
+                <td><input type="text" class="wide"></td>
+                <td>  최종수정일</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>  사업자번호</td>
+                <td><input type="checkbox">대표사업장</td>
+                <td>  법인번호</td>
+                <td><input type="text"><input type="text"></td>
+            </tr>
+            <tr>
+                <td> *업태</td>
+                <td><input type="text" class="wide"></td>
+                <td> *업종</td>
+                <td><input type="text" style="width:400px"></td>
+            </tr>
+            <tr>
+                <td>  대표자</td>
+                <td><input type="text" class="wide"></td>
+                <td>  사업자구분</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>  전화번호</td>
+                <td><input type="text"></td>
+                <td>  팩스번호</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>  이메일</td>
+                <td><input type="email" class="wide"></td>
+                <td>  홈페이지</td>
+                <td><input type="url" style="width:400px"></td>
+            </tr>
+            <tr>
+                <td> *회사구분</td>
+                <td><select name="companySelect" class="wide">
+                        <option value="">선택</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select></td>
+                <td>  대표공종</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> *사업장지역</td>
+                <td>"해당코드없음"</td>
+                <td>  설립일자</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>  본사주소</td>
+                <td colspan="3">
+                    <input type="text" placeholder="우편번호" style="width:60px">
+                    <input type="button" value="Q">
+                    
+                    <span class="addr-content">
+                        <input type="text" placeholder="주소" class="addr">
+                        <input type="text" placeholder="상세주소" class="addr">
+                    </span>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>  자사/영업점 주소</td>
+                <td colspan="3">
+                    <input type="text" placeholder="우편번호" style="width:60px">
+                    <input type="button" value="Q">
+                    
+                    <span class="addr-content">
+                        <input type="text" placeholder="주소" class="addr">
+                        <input type="text" placeholder="상세주소" class="addr">
+                    </span>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td> *등록구분</td>
+                <td></td>
+                <td> *등록일자</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td> *CPO등급</td>
+                <td><textarea rows="6"></textarea></td>
+                <td>  등급</td>
+                <td>
+                    <div style="height:100px; overflow: auto">
+                        <table id="grd">
+                            <tr>
+                                <th>상태</th>
+                                <th>삭제</th>
+                                <th>대표부서코드</th>
+                                <th>대표부서명</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>541432</td>
+                                <td>운영팀</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>342313</td>
+                                <td>영업팀</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>620629</td>
+                                <td>개발팀</td>
+                            </tr>
+                                <tr>
+                                <td></td>
+                                <td></td>
+                                <td>541432</td>
+                                <td>운영팀</td>
+                            </tr>
+                                <tr>
+                                <td></td>
+                                <td></td>
+                                <td>342313</td>
+                                <td>영업팀</td>
+                            </tr>
+                                <tr>
+                                <td></td>
+                                <td></td>
+                                <td>620629</td>
+                                <td>개발팀</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>  부도여부</td>
+                <td>
+                    <input type="radio" id="bkrupChoice1" name="bkrup"  onclick="bkrupYes()">
+                    
+                    <label for="bkrupChoice1">예</label>
+                    
+                    <input type="radio" id="bkrupChoice2" name="bkrup" onclick="bkrupNo()">
+                    
+                    <label for="bkrupChoice2">아니오</label>
+                </td>
+                <td>  부도일자</td>
+                <td><input type="date" id="bkrupDate" ></td>
+            </tr>
+            
+            <tr>
+                <td>  폐업여부</td>
+                <td>
+                    <input type="radio" id="closeChoice1" name="close" onclick="closeYes()">
+                    
+                    <label for="closeChoice1">예</label>
+                    
+                    <input type="radio" id="closeChoice2" name="close" onclick="closeNo()">
+                    
+                    <label for="closeChoice2">아니오</label>
+                </td>
+                <td>  폐업일자</td>
+                <td><input type="date" id="closeDate"></td>
+            </tr>
+            <tr>
+                <td>  추천인</td>
+                <td><input type="text" class="wide"></td>
+                <td>  추천일자</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>  추천사유</td>
+                <td><input type="text" class="wide"></td>
+                <td>  스마트빌아이디</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+    </div>
+  
+</body>
+</html>
