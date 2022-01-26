@@ -1,6 +1,13 @@
+@font-face {
+    font-family: "cjLight";
+    src: local('cjLight'), url('/font/cjLight.woff2') format('woff2');
+}
+
+* { font-family: "cjLight"; }
+
 #trans { 
     border: 1px solid #808080;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -9,11 +16,12 @@
     width: 100%;
     border: 1px solid #808080;
     border-top: 3px solid #808080;
-    border-collapse: collapse;    
+    border-collapse: collapse;
 }
 
-th, td {
+th, td { 
     border: 1px solid #808080;
+    padding: 5px;
 }
 
 td:first-child, td:nth-child(3) {
@@ -36,16 +44,11 @@ textarea {
 
 caption {
     text-align: left;
+    font-weight: bold;
 }
 
-.addr-content {
-    font-size: 0;
-}
-
-.addr {
-    width: 40%;
-   
-}
+.addr-content { font-size: 0;}
+.addr { width: 40%; }
 
 #grd { 
     border-collapse: collapse; 
@@ -60,13 +63,7 @@ caption {
     border-bottom: 5px solid #808080;
 }
 
-#grd th:first-child {
-    width: 10%;
-}
-#grd th:nth-child(2) {
-    width: 10%;
-}
-#grd th:nth-child(3) {
-    width: 40%;
-}
+#grd th:first-child { width: 10%; }
+#grd th:nth-child(2) { width: 10%; }
+#grd th:nth-child(3) { width: 40%; }
 #grd td:nth-child(3) { text-align: center; }
