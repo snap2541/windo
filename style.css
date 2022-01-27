@@ -3,13 +3,19 @@
     src: local('CJ ONLYONE NEW body Light'), url('/font/CJ ONLYONE NEW body Light.woff2') format('woff2');
 }
 
-* { font-family: "CJ ONLYONE NEW body Light"; }
+* { font-family: "CJ ONLYONE NEW body Light"; 
+    font-size: 0.9rem;}
 
 #trans { 
     border: 1px solid #808080;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+#trans input {
+    width: 5rem;
+    margin-left: 0.5rem;
 }
 
 #info { 
@@ -19,12 +25,12 @@
     border-collapse: collapse;
 }
 
- th,td { 
+th, td { 
     border: 1px solid #808080;
 }
 
-tr>td:nth-child(odd) {
-    width : 150px;
+.category {
+    width: 10px;
     white-space: pre;
     padding: 5px;
 }
@@ -37,6 +43,7 @@ tr>td:nth-child(odd) {
 
 textarea { 
     border: 0;
+    height: 95px;
     width: 100%;
     outline: none;
     box-sizing: border-box;
@@ -47,23 +54,19 @@ caption {
     font-weight: bold;
 }
 
-.addr-container {
-    display: flex;
-}
+.addr-container { display: flex; }
 
-.addr-item:nth-child(3), .addr-item:nth-child(4) {
-    flex-grow: 1;
-}
+.addr-item:nth-child(3), .addr-item:nth-child(4) { flex-grow: 1; }
 
-#nestedTb {
-    height: 8em;
+#nested { 
+    height: 100px;
     overflow: auto;
 }
 
 #grd { 
-    border-collapse: collapse; 
-    border : 2px solid #808080;
     width: 100%;
+    border-collapse: collapse; 
+    border: 2px solid #808080;
     padding: 0;
     box-sizing: border-box;
 }

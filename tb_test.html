@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>test</title>
     <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqery/3.2.1/jquery.min.js"></script>
       <script type="text/javascript">
           function bkrupYes(){
               document.getElementById('bkrupDate').disabled = false; 
@@ -21,68 +23,67 @@
 </head>
 
 <body>
-    
     <div id="trans">
-        <label>*거래처코드</label> <input type="text">
+        <label>*거래처코드</label> <input type="text" required>
     </div>
     <div>
+        <caption align="left">▯ 세대정보</caption>
         <table id="info">
-            <caption align="left">▯ 세대정보</caption>
             <tr>
-                <td> *회사명</td>
-                <td><input type="text" class="wide"></td>
-                <td>  최종수정일</td>
+                <td class="category"> *회사명</td>
+                <td><input type="text" class="wide" required></td>
+                <td class="category">  최종수정일</td>
                 <td></td>
             </tr>
             <tr>
-                <td>  사업자번호</td>
+                <td class="category">  사업자번호</td>
                 <td><input type="checkbox">대표사업장</td>
-                <td>  법인번호</td>
+                <td class="category">  법인번호</td>
                 <td><input type="text"><input type="text"></td>
             </tr>
             <tr>
-                <td> *업태</td>
-                <td><input type="text" class="wide"></td>
-                <td> *업종</td>
-                <td><input type="text" style="width:400px"></td>
+                <td class="category"> *업태</td>
+                <td><input type="text" class="wide" required></td>
+                <td class="category"> *업종</td>
+                <td><input type="text" style="width:400px" required></td>
             </tr>
             <tr>
-                <td>  대표자</td>
+                <td class="category">  대표자</td>
                 <td><input type="text" class="wide"></td>
-                <td>  사업자구분</td>
+                <td class="category">  사업자구분</td>
                 <td></td>
             </tr>
             <tr>
-                <td>  전화번호</td>
+                <td class="category">  전화번호</td>
                 <td><input type="text"></td>
-                <td>  팩스번호</td>
+                <td class="category">  팩스번호</td>
                 <td><input type="text"></td>
             </tr>
             <tr>
-                <td>  이메일</td>
+                <td class="category">  이메일</td>
                 <td><input type="email" class="wide"></td>
-                <td>  홈페이지</td>
+                <td class="category">  홈페이지</td>
                 <td><input type="url" style="width:400px"></td>
             </tr>
             <tr>
-                <td> *회사구분</td>
-                <td><select name="companySelect" class="wide">
+                <td class="category"> *회사구분</td>
+                <td><select name="companySelect" class="wide" required>
                         <option value="">선택</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select></td>
-                <td>  대표공종</td>
+                <td class="category" >  대표공종</td>
                 <td></td>
             </tr>
             <tr>
-                <td> *사업장지역</td>
+                <td class="category"> *사업장지역</td>
                 <td>"해당코드없음"</td>
-                <td>  설립일자</td>
+                <td class="category">  설립일자</td>
                 <td></td>
             </tr>
             <tr>
-                <td>  본사주소</td>
+                <td class="category">  본사주소</td>
                 <td colspan="3">
                     <div class="addr-container">
                         <input type="text" placeholder="우편번호" style="width:60px" class="addr-item">
@@ -93,7 +94,7 @@
                 </td>
             </tr>
             <tr>
-                <td>  자사/영업점 주소</td>
+                <td class="category">  자사/영업점 주소</td>
                 <td colspan="3">
                     <div class="addr-container">
                         <input type="text" placeholder="우편번호" style="width:60px" class="addr-item">
@@ -104,17 +105,17 @@
                 </td>
             </tr>
             <tr>
-                <td> *등록구분</td>
+                <td class="category"> *등록구분</td>
                 <td></td>
-                <td> *등록일자</td>
-                <td><input type="date"></td>
+                <td class="category"> *등록일자</td>
+                <td><input type="date" required></td>
             </tr>
             <tr>
-                <td> *CPO등급</td>
-                <td><textarea rows=6></textarea></td>
-                <td>  등급</td>
+                <td class="category"> *CPO등급</td>
+                <td><textarea required></textarea></td>
+                <td class="category">  등급</td>
                 <td>
-                    <div id="nestedTb">
+                    <div id="nested">
                         <table id="grd">
                             <tr>
                                 <th>상태</th>
@@ -160,11 +161,10 @@
                             </tr>
                         </table>
                     </div>
-                    
                 </td>
             </tr>
             <tr>
-                <td>  부도여부</td>
+                <td class="category">  부도여부</td>
                 <td>
                     <input type="radio" id="bkrupChoice1" name="bkrup"  onclick="bkrupYes()">
                     
@@ -174,12 +174,11 @@
                     
                     <label for="bkrupChoice2">아니오</label>
                 </td>
-                <td>  부도일자</td>
+                <td class="category">  부도일자</td>
                 <td><input type="date" id="bkrupDate" ></td>
-            </tr>
-            
+            </tr>           
             <tr>
-                <td>  폐업여부</td>
+                <td class="category">  폐업여부</td>
                 <td>
                     <input type="radio" id="closeChoice1" name="close" onclick="closeYes()">
                     
@@ -189,19 +188,19 @@
                     
                     <label for="closeChoice2">아니오</label>
                 </td>
-                <td>  폐업일자</td>
+                <td class="category">  폐업일자</td>
                 <td><input type="date" id="closeDate"></td>
             </tr>
             <tr>
-                <td>  추천인</td>
+                <td class="category">  추천인</td>
                 <td><input type="text" class="wide"></td>
-                <td>  추천일자</td>
+                <td class="category">  추천일자</td>
                 <td><input type="date"></td>
             </tr>
             <tr>
-                <td>  추천사유</td>
+                <td class="category">  추천사유</td>
                 <td><input type="text" class="wide"></td>
-                <td>  스마트빌아이디</td>
+                <td class="category">  스마트빌아이디</td>
                 <td><input type="text"></td>
             </tr>
         </table>
