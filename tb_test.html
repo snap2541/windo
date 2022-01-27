@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <title>test</title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="style.css" rel="stylesheet">
       <script type="text/javascript">
           function bkrupYes(){
               document.getElementById('bkrupDate').disabled = false; 
@@ -84,27 +84,23 @@
             <tr>
                 <td>  본사주소</td>
                 <td colspan="3">
-                    <input type="text" placeholder="우편번호" style="width:60px">
-                    <input type="button" value="Q">
-                    
-                    <span class="addr-content">
-                        <input type="text" placeholder="주소" class="addr">
-                        <input type="text" placeholder="상세주소" class="addr">
-                    </span>
-                    
+                    <div class="addr-container">
+                        <input type="text" placeholder="우편번호" style="width:60px" class="addr-item">
+                        <input type="button" value="Q" class="addr-item">
+                        <input type="text" placeholder="주소" class="addr-item">
+                        <input type="text" placeholder="상세주소" class="addr-item">
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>  자사/영업점 주소</td>
                 <td colspan="3">
-                    <input type="text" placeholder="우편번호" style="width:60px">
-                    <input type="button" value="Q">
-                    
-                    <span class="addr-content">
-                        <input type="text" placeholder="주소" class="addr">
-                        <input type="text" placeholder="상세주소" class="addr">
-                    </span>
-                    
+                    <div class="addr-container">
+                        <input type="text" placeholder="우편번호" style="width:60px" class="addr-item">
+                        <input type="button" value="Q" class="addr-item">
+                        <input type="text" placeholder="주소" class="addr-item">
+                        <input type="text" placeholder="상세주소" class="addr-item">
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -115,10 +111,10 @@
             </tr>
             <tr>
                 <td> *CPO등급</td>
-                <td><textarea rows="6"></textarea></td>
+                <td><textarea rows=6></textarea></td>
                 <td>  등급</td>
                 <td>
-                    <div style="height:100px; overflow: auto">
+                    <div id="nestedTb">
                         <table id="grd">
                             <tr>
                                 <th>상태</th>

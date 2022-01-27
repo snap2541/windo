@@ -1,14 +1,14 @@
 @font-face {
-    font-family: "cjLight";
-    src: local('cjLight'), url('/font/cjLight.woff2') format('woff2');
+    font-family: "CJ ONLYONE NEW body Light";
+    src: local('CJ ONLYONE NEW body Light'), url('/font/CJ ONLYONE NEW body Light.woff2') format('woff2');
 }
 
-* { font-family: "cjLight"; }
+* { font-family: "CJ ONLYONE NEW body Light"; }
 
 #trans { 
     border: 1px solid #808080;
-    padding: 10px;
     border-radius: 5px;
+    padding: 10px;
     margin-bottom: 10px;
 }
 
@@ -19,14 +19,14 @@
     border-collapse: collapse;
 }
 
-th, td { 
+ th,td { 
     border: 1px solid #808080;
-    padding: 5px;
 }
 
-td:first-child, td:nth-child(3) {
+tr>td:nth-child(odd) {
     width : 150px;
     white-space: pre;
+    padding: 5px;
 }
 
 .wide {
@@ -47,8 +47,18 @@ caption {
     font-weight: bold;
 }
 
-.addr-content { font-size: 0;}
-.addr { width: 40%; }
+.addr-container {
+    display: flex;
+}
+
+.addr-item:nth-child(3), .addr-item:nth-child(4) {
+    flex-grow: 1;
+}
+
+#nestedTb {
+    height: 8em;
+    overflow: auto;
+}
 
 #grd { 
     border-collapse: collapse; 
@@ -67,3 +77,5 @@ caption {
 #grd th:nth-child(2) { width: 10%; }
 #grd th:nth-child(3) { width: 40%; }
 #grd td:nth-child(3) { text-align: center; }
+
+
